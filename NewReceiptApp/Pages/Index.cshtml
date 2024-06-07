@@ -1,0 +1,200 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <section id="billboard" class="position-relative overflow-hidden bg-light-blue">
+        <div class="swiper main-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-md-6">
+                                <div class="banner-content">
+                                    <h1 class="display-2 text-uppercase text-dark pb-5">Your Products Are Great.</h1>
+                                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="image-holder">
+                                    <img src="~/images/banner-image.png" alt="banner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="row d-flex flex-wrap align-items-center">
+                            <div class="col-md-6">
+                                <div class="banner-content">
+                                    <h1 class="display-2 text-uppercase text-dark pb-5">Technology Hack You Won't Get</h1>
+                                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="image-holder">
+                                    <img src="images/banner-image.png" alt="banner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-icon swiper-arrow swiper-arrow-prev">
+            <svg class="chevron-left">
+                <use xlink:href="#chevron-left" />
+            </svg>
+        </div>
+        <div class="swiper-icon swiper-arrow swiper-arrow-next">
+            <svg class="chevron-right">
+                <use xlink:href="#chevron-right" />
+            </svg>
+        </div>
+    </section>
+   
+    <section id="mobile-products" class="product-store position-relative padding-large no-padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="display-header d-flex justify-content-between pb-3">
+                    <h2 class="display-7 text-dark text-uppercase">Shop Items</h2>
+                </div>
+                <div class="swiper product-swiper">
+                    <div class="swiper-wrapper">
+                    @foreach (var item in Model.Items)
+                    {
+                        <div class="swiper-slide">
+                            <div class="product-card position-relative">
+                                <div class="image-holder">
+                                    <img src="images/product-item1.jpg" alt="product-item" class="img-fluid">
+                                </div>
+                                <div class="cart-concern position-absolute">
+                                    <div class="cart-button d-flex">
+                                        <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                                    </div>
+                                </div>
+                                <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
+                                    <h3 class="card-title text-uppercase">
+                                        <a href="#">@item.Name</a>
+                                    </h3>
+                                    <span class="item-quantity text-primary">@item.Quantity</span>
+                                    <span class="item-price text-primary">$@item.Price</span>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        
+                    }
+                    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination position-absolute text-center"></div>
+    </section>
+
+<section>
+
+    <table class="body-wrap">
+        <tbody>
+            <tr>
+                <td></td>
+                <td class="container" width="600">
+                    <div class="content">
+                        <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="content-wrap aligncenter">
+                                        <table width="100%" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="content-block">
+                                                        <h2>Thanks for using our app</h2>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="content-block">
+                                                        <table class="invoice">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Rana Gaballah<br>Transiction #12345<br>July 06 2024</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table class="invoice-items" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+
+                                                                                <tr class="item-row" style="display: none;">
+                                                                                    <td class="item-name"></td>
+                                                                                    <td class="item-price alignright"></td>
+                                                                                </tr>
+                                                                                <!-- Existing rows for total -->
+                                                                                <tr class="total">
+                                                                                    <td class="alignright" width="80%"></td>
+                                                                                    <td class="alignright">Total</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="body-wrap">
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td class="container" width="600">
+                                        <div class="content">
+                                            <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="content-wrap aligncenter">
+                                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                                <tbody>
+  
+                                                                    <tr>
+                                                                        <input type="number" id="paid-amount" class="form-control" placeholder="Enter Amount Paid">
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <br>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <button class="btn btn-medium btn-dark text-uppercase btn-rounded-none" onclick="processPayment()">Pay Now</button>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <br>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                             </table>
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</section>
+
+   
+
+    
+
+
+

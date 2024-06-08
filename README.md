@@ -109,8 +109,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 If you have any questions or need further assistance, please feel free to contact:
 
 - **Rana Gaballah**
-- Email: [your-email@example.com]
-- Phone: [Your Phone Number]
+- Email: ranagaballah88@gmail.com
+- Phone: 01118566002
 
 ---
 
